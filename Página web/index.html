@@ -1,0 +1,130 @@
+<!DOCTYPE html> <!-- Define el tipo de documento como HTML5 -->
+<html lang="es">
+<head>
+    <!-- Metadatos de la página -->
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <meta name="description" content="Ejemplo de uso de etiquetas HTML5">
+    <meta name="keywords" content="HTML5, etiquetas, tarea, ejemplo">
+    <meta name="author" content="Roberto Urbina">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Etiquetas HTML5</title> <!-- Título en la pestaña del navegador -->
+    <base href="./"> <!-- URL base para enlaces relativos -->
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace a hoja de estilos externa -->
+</head>
+<body>
+    <!-- Encabezado principal de la página -->
+    <header>
+        <h1>Ejemplo de Etiquetas HTML5</h1>
+        <p>Nombre: <strong>Roberto Urbina</strong></p> <!-- Texto en negrita -->
+        <img src="imagen rum.jpg" alt="Foto de Roberto Urbina" width="150"> <!-- Imagen de avatar -->
+    </header>
+
+    <!-- Sección con navegación y artículo -->
+    <section>
+        <h2>Estructura de Secciones</h2>
+        <article>
+            <!-- Grupo de encabezados relacionados -->
+            <hgroup>
+                <h2>Artículo Principal</h2>
+                <h3>Subtítulo del artículo</h3>
+            </hgroup>
+            <p>Este es un párrafo de ejemplo.</p> <!-- Párrafo normal -->
+            <address>Contacto: urbi2795@gmail.com</address> <!-- Información de contacto -->
+        </article>
+
+        <!-- Navegación con enlaces internos -->
+        <nav>
+            <ul>
+                <li><a href="#listas">Listas</a></li>
+                <li><a href="#texto">Texto</a></li>
+                <li><a href="#multimedia">Multimedia</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Listas y elementos de agrupación -->
+    <section id="listas">
+        <h2>Listas y Grupos</h2>
+        <ol> <!-- Lista ordenada -->
+            <li>Primer elemento</li>
+            <li>Segundo elemento</li>
+        </ol>
+        <ul> <!-- Lista desordenada -->
+            <li>Elemento sin orden</li>
+            <li>Otro más</li>
+        </ul>
+        <dl> <!-- Lista de definición -->
+            <dt>HTML</dt> <!-- Término -->
+            <dd>Lenguaje de marcado</dd> <!-- Descripción -->
+        </dl>
+        <!-- Figura con imagen y leyenda -->
+        <figure>
+            <img src="example.jpg" alt="Ejemplo de imagen" width="200">
+            <figcaption>Una imagen ilustrativa</figcaption>
+        </figure>
+        <!-- Detalles expandibles -->
+        <details>
+            <summary>Más información</summary>
+            <p>Este texto está oculto hasta que se despliega.</p>
+        </details>
+        <!-- Cuadro de diálogo -->
+        <dialog open>Este es un cuadro de diálogo.</dialog>
+    </section>
+
+    <!-- Elementos relacionados al texto -->
+    <section id="texto">
+        <h2>Texto</h2>
+        <p>Texto <b>negrita</b>, <i>cursiva</i>, <em>énfasis</em>, <strong>importante</strong>.</p>
+        <p><mark>Texto marcado</mark> y <small>texto pequeño</small>.</p>
+        <blockquote>“Este es un texto citado.”</blockquote> <!-- Cita en bloque -->
+        <p>Cita en línea: <q>Texto citado aquí</q></p>
+        <p>Abreviatura: <abbr title="HyperText Markup Language">HTML</abbr></p>
+        <p>Definición: <dfn title="Lenguaje de marcado">HTML</dfn></p>
+        <p><code>print("Hola mundo")</code> y entrada de teclado: <kbd>Ctrl + C</kbd></p>
+        <p><del>Texto eliminado</del> <ins>Texto insertado</ins></p>
+        <p>Subíndice: H<sub>2</sub>O | Superíndice: x<sup>2</sup></p>
+        <p>Fecha y hora: <time datetime="2025-06-15">15 de junio de 2025</time></p>
+        <p>Dato: <data value="12345">Número de identificación</data></p>
+        <p>Texto en <span style="color:red;">span rojo</span></p>
+    </section>
+
+    <!-- Multimedia: imagen, audio, video, SVG, canvas -->
+    <section id="multimedia">
+        <h2>Multimedia e Imágenes</h2>
+        <!-- Imagen simple -->
+        <img src="example.jpg" alt="Imagen de ejemplo" width="200">
+        <!-- Imagen adaptable -->
+        <picture>
+            <source srcset="example-small.jpg" media="(max-width: 600px)">
+            <source srcset="example-large.jpg">
+            <img src="example.jpg" alt="Imagen adaptable">
+        </picture>
+        <!-- Lienzo para gráficos (se puede usar con JS) -->
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+            Tu navegador no soporta canvas.
+        </canvas>
+        <!-- Gráfico vectorial (SVG) -->
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+        </svg>
+        <!-- Audio con controles -->
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Tu navegador no soporta audio.
+        </audio>
+        <!-- Video con controles -->
+        <video controls width="320">
+            <source src="video.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+        </video>
+        <!-- Video de YouTube incrustado -->
+        <iframe width="300" height="200" src="https://youtu.be/NdWeFJF40x8" 
+            title="YouTube video" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Roberto Urbina</p>
+    </footer>
+</body>
+</html>

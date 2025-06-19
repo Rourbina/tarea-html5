@@ -1,131 +1,204 @@
-<!DOCTYPE html> <!-- Define el tipo de documento como HTML5 -->
-<html lang="es">
-<head>
-    <!-- Metadatos de la página -->
-    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
-    <meta name="description" content="Ejemplo de uso de etiquetas HTML5">
-    <meta name="keywords" content="HTML5, etiquetas, tarea, ejemplo">
-    <meta name="author" content="Roberto Urbina">
+<!-- !DOCTYPE>: Define el tipo de documento como HTML5.  -->
+<!DOCTYPE html> 
+<!-- <html>: Define el elemento raíz de un documento HTML.   -->
+<html lang="es"> 
+
+<!--<head>: Define la cabeza de un documento HTML, que contiene información sobre el 
+documento, como el título, los enlaces, los estilos y los scripts. -->
+
+
+<head> <!--  -->
+
+    <!-- <meta>: Define los metadatos de un documento HTML, como el autor, la descripción, las 
+palabras clave, el juego de caracteres o la vista de compatibilidad.  -->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo de Etiquetas HTML5</title> <!-- Título en la pestaña del navegador -->
-    <base href="./"> <!-- URL base para enlaces relativos -->
-    <link rel="stylesheet" href="styles.css"> <!-- Enlace a hoja de estilos externa -->
+
+<!-- <title>: Define el título de un documento HTML, que se muestra en la barra de título del 
+navegador o en la pestaña de la página.  -->    
+    <title>Diseño Web</title>
+<!-- para vicular la hoja de estilos  -->
+<link href="css/estilos.css" rel="stylesheet">
+
 </head>
+
+<!-- <body>: Define el cuerpo de un documento HTML, que contiene el contenido visible de la 
+página.  -->
 <body>
-    <!-- Encabezado principal de la página -->
-    <header>
-        <h1>Ejemplo de Etiquetas HTML5</h1>
-        <p>Nombre: <strong>Roberto Urbina</strong></p> <!-- Texto en negrita -->
-        <img src="imagen_rum.jpg" alt="Foto de Roberto Urbina" width="150"> <!-- Imagen -->
-    </header>
+<!--  <h1> - <h6>: Definen los encabezados de un documento HTML, que pueden ser títulos, 
+subtítulos o nombres de secciones. El número indica el nivel de jerarquía, siendo <h1> el 
+más importante y <h6> el menos importante.  -->
 
-    <!-- Sección con navegación y artículo -->
-    <section>
-        <h2>Estructura de Secciones</h2>
-        <article>
-            <!-- Grupo de encabezados relacionados -->
-            <hgroup>
-                <h2>Artículo Principal</h2>
-                <h3>Subtítulo del artículo</h3>
-            </hgroup>
-            <p>Este es un párrafo de ejemplo.</p> <!-- Párrafo normal -->
-            <address>Contacto: urbi2795@gmail.com</address> <!-- Información de contacto -->
-        </article>
+    <!-- header para encabezados-->
+<header>  
+    <h1>Roberto Urbina Mora</h1>
 
-        <!-- Navegación con enlaces internos -->
-        <nav>
-            <ul>
-                <li><a href="#listas">Listas</a></li>
-                <li><a href="#texto">Texto</a></li>
-                <li><a href="#multimedia">Multimedia</a></li>
-            </ul>
-        </nav>
-    </section>
+    <!-- PARA IMAGENES -->
+    <img src="img/imagen_rum.jpg" >
 
-    <!-- Listas y elementos de agrupación -->
-    <section id="listas">
-        <h2>Listas y Grupos</h2>
-        <ol> <!-- Lista ordenada -->
-            <li>Primer elemento</li>
-            <li>Segundo elemento</li>
-        </ol>
-        <ul> <!-- Lista desordenada -->
-            <li>Elemento sin orden</li>
-            <li>Otro más</li>
-        </ul>
-        <dl> <!-- Lista de definición -->
-            <dt>HTML</dt> <!-- Término -->
-            <dd>Lenguaje de marcado</dd> <!-- Descripción -->
-        </dl>
-        <!-- Figura con imagen y leyenda -->
-        <figure>
-            <img src="example.jpg" alt="Ejemplo de imagen" width="200">
-            <figcaption>Una imagen ilustrativa</figcaption>
-        </figure>
-        <!-- Detalles expandibles -->
-        <details>
-            <summary>Más información</summary>
-            <p>Este texto está oculto hasta que se despliega.</p>
-        </details>
-        <!-- Cuadro de diálogo -->
-        <dialog open>Este es un cuadro de diálogo.</dialog>
-    </section>
 
-    <!-- Elementos relacionados al texto -->
-    <section id="texto">
-        <h2>Texto</h2>
-        <p>Texto <b>negrita</b>, <i>cursiva</i>, <em>énfasis</em>, <strong>importante</strong>.</p>
-        <p><mark>Texto marcado</mark> y <small>texto pequeño</small>.</p>
-        <blockquote>“Este es un texto citado.”</blockquote> <!-- Cita en bloque -->
-        <p>Cita en línea: <q>Texto citado aquí</q></p>
-        <p>Abreviatura: <abbr title="HyperText Markup Language">HTML</abbr></p>
-        <p>Definición: <dfn title="Lenguaje de marcado">HTML</dfn></p>
-        <p><code>print("Hola mundo")</code> y entrada de teclado: <kbd>Ctrl + C</kbd></p>
-        <p><del>Texto eliminado</del> <ins>Texto insertado</ins></p>
-        <p>Subíndice: H<sub>2</sub>O | Superíndice: x<sup>2</sup></p>
-        <p>Fecha y hora: <time datetime="2025-06-15">15 de junio de 2025</time></p>
-        <p>Dato: <data value="12345">Número de identificación</data></p>
-        <p>Texto en <span style="color:red;">span rojo</span></p>
-    </section>
+</header>
 
-    <!-- Multimedia: imagen, audio, video, SVG, canvas -->
-    <section id="multimedia">
-        <h2>Multimedia e Imágenes</h2>
-        <!-- Imagen simple -->
-        <img src="Imagen_Prueba.jpg" alt="Imagen de ejemplo" width="200"></img>
-        <!-- Imagen adaptable -->
-        <picture>
-  <source srcset="example-small.jpg" media="(max-width: 600px)">
-  <source srcset="example-large.jpg">
-  <img src="example.jpg" alt="Imagen adaptable">
-</picture>
+<div class="nav-bg">
+    <nav class="navegacion-principal contenedor">
 
-        <!-- Lienzo para gráficos (se puede usar con JS) -->
-       <canvas id="miLienzo" width="300" height="150" style="border:1px solid black;"></canvas>
-        <!-- Gráfico vectorial (SVG) -->
-        <svg width="100" height="100">
-            <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
-        </svg>
-        <!-- Audio con controles -->
-        <audio controls>
-            <source src="audio.wav" type="audio/wav">
-            Tu navegador no soporta audio.
-        </audio>
-        <!-- Video con controles -->
-       <video controls width="320">
-  <source src="video.mp4" type="video/mp4">
-  Tu navegador no soporta video.
-</video>
-        <!-- Video de YouTube incrustado -->
-        <iframe width="300" height="200" 
-    src="https://www.youtube.com/embed/NdWeFJF40x8"
-    title="YouTube video" frameborder="0" allowfullscreen>
+        <a href="#">Inicio</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Clientes</a>
+
+    </nav>
+</div>
+
+<section>
+
+<h2>Diseño Web</h2>
+<p> Tambor, Alajuela</p>
+
+<!--
+category: Map
+tags: [navigation, location, travel, pin, position, marker]
+version: "1.0"
+unicode: "eae8"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="88"
+  height="88"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="#ffcc00"
+  stroke-width="1"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+  <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+</svg>
+
+<a href="#">Contactar</a>
+
+
+</section>
+    
+
+<!-- <p>: Define un párrafo de un documento HTML, que puede contener texto, imágenes, enlaces 
+u otros elementos.   -->
+
+ <!-- los tamaños de las letras cambian entre los niveles de h1 y en p es el más pequeño -->
+
+ <!-- para contenido principal  main-->
+    <main>
+
+    <h2>Mis Redes sociales</h2>
+
+    <!-- <hgroup>: Define un grupo de encabezados de un documento HTML, que pueden ser un 
+título y un subtítulo, o varios niveles de encabezados relacionados. -->
+    <hgroup>
+    <h3>Redes Sociales</h3>
+<!--
+tags: [social media, facebook, fb, instagram, messegner, giphy]
+category: Brand
+version: "1.49"
+unicode: "efb0"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="32"
+  height="32"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="#000000"
+  stroke-width="1"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 10.174c1.766 -2.784 3.315 -4.174 4.648 -4.174c2 0 3.263 2.213 4 5.217c.704 2.869 .5 6.783 -2 6.783c-1.114 0 -2.648 -1.565 -4.148 -3.652a27.627 27.627 0 0 1 -2.5 -4.174z" />
+  <path d="M12 10.174c-1.766 -2.784 -3.315 -4.174 -4.648 -4.174c-2 0 -3.263 2.213 -4 5.217c-.704 2.869 -.5 6.783 2 6.783c1.114 0 2.648 -1.565 4.148 -3.652c1 -1.391 1.833 -2.783 2.5 -4.174z" />
+</svg>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+
+    <h3>Canal YouTube</h3>
+    <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/NdWeFJF40x8"
+        title="Video de YouTube"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
 </iframe>
-    </section>
 
-    <!-- Pie de página -->
-    <footer>
-        <p>&copy; 2025 Roberto Urbina</p>
-    </footer>
+  
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    </hgroup>
+     <h2>Contacto</h2>
+
+     <form>
+<fieldset>
+
+    <legend>Contáctame llenando todos los campos</legend>
+
+    <div>
+        <label>Nombre:</label>
+        <input type="text" placeholder="Tu Nombre">
+    </div>
+
+    <div>
+        <label>Teléfono:</label>
+        <input type="text" placeholder="Tu Teléfono">
+    </div>
+
+    <div>
+        <label>Correo:</label>
+        <input type="text" placeholder="Tu Correo">
+    </div>
+
+    <div>
+        <label>Mensaje:</label>
+
+        <textarea></textarea>
+    </div>
+
+    <div>
+       <input type="submit" value="Enviar">
+    </div>
+
+</fieldset>
+
+
+     </form>
+    
+    </main>
+    
+     <section>
+        
+        <address>
+
+        <!-- <a>: Define un enlace de un documento HTML, que puede contener texto, imágenes u otros 
+        elementos.  -->
+
+        <!-- <br>: Define un salto de línea de un documento HTML, que se utiliza para separar el texto 
+        sin crear un nuevo párrafo.  -->
+
+         Escrito por Roberto Urbina<br>
+         Correo: <a href="urbi2795@gmail.com">roberto@email.com</a><br>
+         Teléfono: +506 7113-5426<br>
+  
+
+        </address>
+
+
+     </section>
+
+<!-- PIE DE PAGINA -->
+<footer>
+
+<!-- <address>: Define la información de contacto del autor o el propietario de un documento o 
+un artículo HTML, que puede contener un nombre, una dirección, un teléfono, un correo 
+electrónico o un enlace -->
+
+<p>Todos los derechos reservados. Roberto Urbina</p>
+</footer>
+
 </body>
 </html>
